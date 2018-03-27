@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8 ]><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" class="no-js ie9"><![endif]-->
+<!--[if !IE]><!--><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" class="no-js"><!--<![endif]-->
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	
+	
+	<!--[if lt IE 7 ]>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+		<script>
+			CFInstall.check({
+			     onmissing: function(){window.location.href = "/ie6/"}
+			});
+		</script>
+	<![endif]-->
+
+	<!--[if IE]>
+  <script src="/assets/js/PIE.js"></script>
+  <link rel="stylesheet" href="/assets/css/ie.css" />
+	<![endif]-->
+	
+	<title>The Good Lab - Chicago, IL  : The Good Lab is a holistic web development company that focuses on building lean, smart and scalable websites, web applications and e-commerce platforms.</title>
+  <meta name="description" content="About
+The Good Lab is a holistic web development company that focuses on building lean, smart and scalable websites, web applications and e-commerce platforms. We believe technical architecture and visual design go hand in hand, and that the design of a product does not stop at a pixel level. We work with small business, start-ups, emerging brands and other niche organizations to help create awesome products that captivate users." /> 
+  <meta name="keywords" content="web development, chicago, development, design, e-commerce, application, marketing, tools, internet, branding, php, expressionengine, " />
+
+	
+  <!-- <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" /> -->
+
+  <meta name="google-site-verification" content="BFB6gDV5GkXJX_DR1sZJGShsJXJ-g1gUigO7q3mGL5g" />
+
+	
+	<link rel="shortcut icon" href="../assets/images/favicon.png" />
+	<link rel="apple-touch-icon" href="../assets/images/favicon.png" />
+
+	
+	<link rel="stylesheet" href="../assets/css/global-v=1.css" />
+	<link rel="stylesheet" href="../assets/js/fancybox/jquery.fancybox-1.3.4-v=1.css" />
+	<link rel="stylesheet" href="../assets/js/syntaxhighlighter/styles/shCore.css" />
+	<link rel="stylesheet" href="../assets/js/syntaxhighlighter/styles/shCoreDefault.css"/>
+	<link rel="stylesheet" href="../assets/js/syntaxhighlighter/styles/shThemeRDark.css"/>
+	
+	
+	
+  
+  <script>
+    var _gaq = [['_setAccount', 'UA-23070397-1'], ['_trackPageview']]; 
+    
+    (function(d, t) {
+      var g = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = '//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+      })(document, 'script');
+  </script>
+  
+	
+	
+	<script src="../assets/js/modernizr-1.6.min.js"></script>
+	
+  <!-- facebook and twitter scripts -->
+	<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+	<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	
+    
+  
+  
+  <meta property="og:title" content="Infinite Scroll with EE"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://thegoodlab.com/articles/infinite-scroll-with-ee"/>
+  <meta property="og:image" content="http://thegoodlab.com/assets/images/logo.png"/>
+  <meta property="og:site_name" content="The Good Lab"/>
+  <meta property="og:description" content="## Introduction I'm sure most of you are aware of the infinite scroll feature we're writing about. If not, check out: Svpply, Pinterest, or Lookbook.nu. The concept is not too hard to understand. When the page first loads, it loads an initial amount of items, and after the user has scrolled to the bottom of the content, more content is loaded and the user has the ability to keep scrolling. Assuming there is an endless amount of content, the user could scroll forever, hence infinite. This technique uses nearly every part of a common technology stack in a typical ExpressionEngine"/>
+  
+  
+
+
+
+</head>
+<body>
+  
+  
+    
+  <div id='content-container' class='inside clearfix'>
+    
+    <section id='white-col-container'>
+      
+      <div class='responsive-inside clearfix'>
+
+        <span id='twitter-title'>Obligatory Twitter Feed</span>
+
+        <h1>The Good Lab</h1><span>mobile</span>
+
+        
+
+      </div><!-- .responsive-inside -->
+
+    </section><!-- #white-col-container -->
+
+    <section id='main-container'>
+    
+      <header class='clearfix'>
+        <a id='h1_link' href='../index.html'><h1>THE GOOD LAB</h1></a>
+        <nav>
+          <ul class='has-layout'>
+            <li class='col-1 first '><a href='../index.html'><span class='number'>01</span><span class='link-name'>Home</span></a></li>
+            <li class='col-1 '><a href='../work.html'><span class='number'>02</span><span class='link-name'>Work</span></a></li>
+            <li class='col-1 '><a href='../about.html'><span class='number'>03</span><span class='link-name'>About</span></a></li>
+            <li class='col-1 '><a href='../contact.html'><span class='number'>04</span><span class='link-name'>Contact</span></a></li>
+            <li class='col-1 here'><a href='../articles.html'><span class='number'>05</span><span class='link-name'>Articles</span></a></li>
+          </ul>
+        </nav>
+        <ul id='dots' class='has-layout'>
+          <li><a target="_blank" href='mailto:hello@thegoodlab.com'><img src='../assets/images/icon-mail.png' /></a></li>
+          <li><a target="_blank" href='http://www.twitter.com/thegoodlab'><img src='../assets/images/icon-twitter.png' /></a></li>
+          
+          <li><a target="_blank" href='http://www.youtube.com/watch?v=vLReIhRgVS8'><img src='../assets/images/icon-question.png' /></a></li>
+          
+          
+        </ul>
+      </header>
+      <div class='dotted-line'>&nbsp;</div>
+
+  <section id='blog-listing-content-container' class='clearfix'>
+    <section id='blog-listing-content-left' class='col-6 left first'>
+      
+      
+        
+  
+  
+  
+<div class='blog-listing-article-container'>
+  <h2><a href='infinite-scroll-with-ee.html' class='blog-title-link'>Infinite Scroll with EE</a></h2>
+  <span class='blog-date'>Thursday, December 29th 2011</span>
+  
+  <div id='article-intro-content-container'>
+	<div class='intro-text'>
+
+<p>A few weeks ago, we were asked about an infinite scroll feature found on one of our ExpressionEngine builds, and were suggested to write a tutorial on it. Great idea!  In this article we want to explain and highlight how to implement an infinite scroll feature using EE.  This tutorial will cover the HTML, Javscript and EE techniques needed to implement an infinite scroll feature for a simple news listing.</p>
+
+</div>
+
+	</div>
+
+	<div id='article-content-container'>
+    <h2>Introduction</h2>
+
+<p>I&#8217;m sure most of you are aware of the infinite scroll feature we&#8217;re writing about.  If not, check out: <a href="http://svpply.com">Svpply</a>, <a href="http://pinterest.com/">Pinterest</a>, or <a href="http://lookbook.nu/">Lookbook.nu</a>.  The concept is not too hard to understand.  When the page first loads, it loads an initial amount of items, and after the user has scrolled to the bottom of the content, more content is loaded and the user has the ability to keep scrolling.  Assuming there is an endless amount of content, the user could scroll forever, hence infinite.</p>
+
+<p>This technique uses nearly every part of a common technology stack in a typical ExpressionEngine build: HTML + CSS, Javascript, and a few EE template tags.  I&#8217;ll go through each of these areas incrementally and at the end of the tutorial you can see a working version and download the sample code.</p>
+
+<p>In our example, we are going to be creating a basic News Feed, with the page initially loading 3 articles, and when the user scroll to the bottom of the page, we load more articles one at a time.</p>
+
+<h2>HTML</h2>
+
+<p>The HTML in our example is pretty straight forward.  All we need is a container that holds our individual news articles, and a few additional data parameters, which help communicate with the javascript.  To begin, we&#8217;ll setup our basic html structure. Then, add a container to hold these articles.  Inside the article container we&#8217;ll create an individual article to be shown.  Note, we&#8217;ve included some CSS to clean things up a bit.</p>
+
+<script type="syntaxhighlighter" class="brush: php; html-script: true;"><![CDATA[
+<html>
+    <head>
+        <style>
+        .article-container{
+            border:1px solid #666;
+            margin-top:10px;
+            padding:20px;
+            width:300px;
+        }
+        .article-container h1{
+            font-size:18px;
+            font-weight:bold;
+        }
+        .article-container img{
+            display:block;
+            margin:10px 0;
+        }
+        .article-container p{
+            padding:8px 0;
+        }
+        </style>
+    </head>
+    <body>
+    
+    <div data-start-at='3' data-increment-by='1' id='articles-container'>
+        
+        <div class='article-container'>
+            <h1>News Article 1</h1>
+            <img width='100px' src='/assets/images/placeholder.png' alt='article image' />
+            <p class="article-content">
+                Distinctively restore reliable action items and granular solutions. Synergistically actualize viral products rather than real-time paradigms. Compellingly develop one-to-one infomediaries with equity invested benefits. 
+            </p>
+        </div>
+    
+    </div><!-- #articles-container -->
+
+    </body>
+</html>
+]]></script>
+
+<p>In the above example you&#8217;ll notice the div, #articles-container, has two data attributes: <em>data-start-at</em> and <em>data-increment-by</em>.  These two pieces of data are the first inklings to the infinite scroll functionality.  The <em>data-start-at</em> value corresponds to the number of items we are going initially have on the page.   <em>Data-increment-by</em> is the value for the number of articles we want to load once we reach the bottom of the page.  After loading this into the browser, here is what we should have:</p>
+
+<p><img src="http://www.thegoodlab.com/content/uploads/demo-1.png" alt="Screenshot-1" style="border: 0;" alt="image" /></p>
+
+<p>Next, we&#8217;ll go over our EE setup and add the Channel tags necessary for our page load content.</p>
+
+<h2>EE Setup</h2>
+
+<p>Within the EE Control Panel we have created a Field Group, News, which will hold our news stories.  We have two additional fields for our example:</p>
+
+<ul>
+<li>news_image : image field</li>
+<li>news_content : text area field</li>
+</ul>
+
+<p>We have also created a Channel, <em>News</em>, which uses our <em>News</em> Field Group. After creating a handful of test entries, we will go back into our markup and add EE tags to list our articles. (You&#8217;ll probably want to create 7 - 10 entries to really test this out.)</p>
+
+<script type="syntaxhighlighter" class="brush: php; html-script: true;"><![CDATA[
+<div data-start-at='3' data-increment-by='1' id='articles-container'>
+    
+    &#123;exp:channel:entries
+    channel="news"
+    disable="categories|category_fields|member_data|pagination|trackbacks"
+    dynamic="off"
+    orderby="date"
+    limit="3"}
+        <div class='article-container'>
+            <h1>{title}</h1>
+            <img width='100px' src='{news_image}' alt='article image' />
+            <p class="article-content">{news_content}</p>
+        </div>
+    &#123;/exp:channel:entries&#125;
+
+</div><!-- #articles-container -->
+]]> </script>
+
+<p>The channel:entries tag should be nothing out of the ordinary, but notice we are setting the limit to 3.  This limit parameter should have the same value as the <em>data-start-at</em> attribute we created on the #articles-container div.</p>
+
+<p>After loading the page with the EE tags implemented we should get an output resembling this:</p>
+
+<p><img src="http://www.thegoodlab.com/content/uploads/demo-2.png" alt="Screenshot-2" style="border: 0;" alt="image" /></p>
+
+<p>Next, we&#8217;ll hook up some javascript and ajax to get the infinite scroll working.</p>
+
+<h2>Javascript</h2>
+
+<p>The javascript for this technique is definitely the most complicated part.  For this example I am using jQuery along with a jQuery plugin, <a href="http://www.beyondcoding.com/2009/01/15/release-jquery-plugin-endless-scroll/">Endlessscroll</a>, which fires a callback function when we have reached the bottom of the page.</p>
+
+<p>After including jQuery and Endlessscroll, we&#8217;ll want to create a class to control the infinite scroll feature.  In our example, we have called this <em>Scroll_class</em>.  The first method we&#8217;re going to add to <em>Scroll_class</em> is <em>init</em>, which will handle setting up some global JS variables.</p>
+
+<script type="syntaxhighlighter" class="brush: js;"><![CDATA[
+var Scroll_class = {
+    
+    init: function(){
+        
+        var self = this;
+
+        //container holding articles
+        self.$container = $('#articles-container');
+        
+        //variables usded for counting and loading articles
+        self.start_at = self.$container.data('start-at');
+        self.increment_by = self.$container.data('increment-by');
+        self.current_index = self.start_at;
+        
+        //fuses that tell us to stop the ajax calls
+        self.at_end = false;
+        self.error = false;
+
+        //the actual endless scroll event
+            $(document).endlessScroll({
+            bottomPixels: 200
+            ,fireDelay: 500
+            ,fireOnce: true
+            ,callback:function(){
+                self.get_new_content();         
+            }
+            });
+
+    }
+    
+    ,get_new_content: function(){
+            
+    }
+
+}
+
+$(document).ready(function(){
+        
+    Scroll_class.init();
+
+});
+]]> </script>
+
+<p>In the first part of the init method we get a reference to the container holding all the articles.  Next, we get the two data attributes we specified and set another property, <em>self.current_index</em>, which will hold the number of articles we have loaded onto the page at any given point during the scrolling.</p>
+
+<div class="sidenote">
+
+<p>Please use a modern version of jQuery, as an old version may not support the .data() method.</p>
+
+</div>
+
+<p>In this <em>init</em> method, we set <em>self.current_index</em> to the <em>self.start_at</em> value because it will initially correspond to the number of articles we load onto the page.  Next, we setup two fuse properties.  These will be used to alert us when we need to stop loading content, either because of an error or if we have no more content to load.  Finally, we initialize our endlessScroll event.  The endless-scroll plugin has a variety of options, but here are the ones we are using:</p>
+
+<ul>
+<li>bottomPixels:  How many pixels from the bottom of the page we want the event to fire at.</li>
+<li>fireDelay: How many milliseconds to wait before we let another event fire off.</li>
+<li>fireOnce: Only fire once until the execution of the current event is completed.</li>
+<li>callback: The function to run after the event has fired.</li>
+</ul>
+
+<p>For the callback parameter we create an anonymous function, which in-turn calls another <em>Scroll_class</em> method, <em>get_new_content</em>.</p>
+
+<p>The get_new_content method needs to do 2 main things: One, it needs to load our new content.  Two, it needs to increment our self.current_index property, which tells us what specific piece of content to load.  Here is the code for this method:</p>
+
+<script type="syntaxhighlighter" class="brush: js;"><![CDATA[
+var self = this;
+
+if(self.at_end || self.error) return false;
+
+$.ajax({
+  type: "POST"
+  ,url: "/index.php/home/ajax_scroll"
+  ,data:{
+    offset: self.current_index
+    ,limit: self.increment_by
+  }
+  ,success: function(data){
+    
+    data = $.trim(data);
+  
+    if(data == "error"){
+        self.error = true;
+        return false;
+    }else if(data == "end"){
+        self.at_end = true;
+        return false;
+    }
+
+    //add new code to container
+    self.$container.append(html);
+    
+    //increment counter
+    self.current_index += self.increment_by;
+    
+    }
+
+});
+]]> </script>
+
+<p>First, you&#8217;ll see we have a conditional checking to see if we are at the end of the content or if we have encountered an error.  Assuming both of these are set to false, we proceed.  The next piece is setting up an AJAX call to request our new content.  Our AJAX options are:</p>
+
+<ul>
+<li>type - we want to send the data to EE via POST vars.</li>
+<li>url - this is the template our ajax call will get content from</li>
+<li>data - the data that will be passed via POST.</li>
+<li>success - the function to call after the content has been returned</li>
+</ul>
+
+<p>Notice that the data object has two properties: <em>offset</em> and <em>limit</em> which we set to our two class properties self.current_index and self.increment_by.</p>
+
+<p>Our success function has the parameter data, which holds the HTML to the content being returned.  The first thing happening in the method is trimming the data variable.</p>
+
+<div class='sidenote'>
+
+<p>Sometimes, because of the EE template parser, content can have white spaces preceding and trailing the markup.</p>
+
+</div>
+
+<p>Next, check to see if the data returned was the string &#8220;error&#8221; or &#8220;end&#8221;, which would signify each respective issue when loading content.  If one of those strings is detected, the class property is set and we return false, causing no content to be added to the screen.  Assuming the content that was returned is not one of our fuse flags, we will then append the HTML returned to the container.  Finally, after the new content has been added to the screen we increment the <em>self.current_index</em> property.</p>
+
+<p>Now that we see how the javascript is written to handle the loading of new content, lets take a look at the server-side ajax template, which returns us our content.</p>
+
+<h3>AJAX</h3>
+
+<p>The last major part of the infinite scroll technique is returning new content from the AJAX request.  In our example, we have created another template, <em>ajax_scroll.html</em>, which contains HTML and EE tags to return our content.  As we saw in the previous section, we&#8217;re passing two POST variables with our ajax request: <em>offset</em> and <em>limit</em>, and in order to access these we have enabled PHP within this specific template, with it being parsed on <em>input</em>.</p>
+
+<div class='sidenote'>
+
+<p>You can probably use another plugin or extension, such as <a href="http://devot-ee.com/add-ons/mo-variables">Mo&#8217; Variables</a>, to handle this without turning on PHP, but for the sake of simplicity we will rely on PHP for this example.</p>
+
+</div>
+
+<script type="syntaxhighlighter" class="brush: php; html-script: true;"><![CDATA[
+&lt;?php
+
+$EE =& get_instance();
+$limit = $EE->input->post('limit');
+$offset = $EE->input->post('offset');
+
+if( ! $offset || ! $limit){
+    return 'error';
+}
+
+?&gt;
+
+&#123;exp:channel:entries
+channel="news"
+disable="categories|category_fields|member_data|pagination|trackbacks"
+dynamic="off"
+offset="&lt;?php echo $offset; ?&gt;"
+orderby="date"
+limit="&lt;?php echo $limit; ?&gt;"}
+    
+    
+
+    <div class='article-container'>
+        <h1>{title}</h1>
+        <img width='100px' src='{news_image}' alt='article image' />
+        <p>{news_content}</p>
+    </div>
+&#123;/exp:channel:entries&#125;
+]]> </script>
+
+<p>Within this template we have 3 major pieces:</p>
+
+<ol>
+<li>Getting the post variables</li>
+<li>An EE chanel entries tag</li>
+<li>The markup</li>
+</ol>
+
+<p>Within the PHP tags at the top of the page, we first get the EE super object, which gives us access to the post variables.  After getting those two variables we do a quick check to make sure they were actually included.  If not we return &#8220;error&#8221;, which if you remember, we are checking for in our javascript.  The next parts are the EE entries tag and the HTML markup.  These two should be fairly straight forward.  The markup is the exact same that is used on our main listing template, and the channel:entries tag uses our post variables to know which content to display.  Also, notice the no_result conditional which will return &#8220;end&#8221; if there is no content to display i.e.: we have reached the end of our content listing.</p>
+
+<p>After getting this last piece in place, we are done with the implementation.  Fire up your page to see how things look, hopefully your content loads and scrolls correctly.</p>
+
+<h2>Result</h2>
+
+<p>That&#8217;s it!  Pretty simple, right?</p>
+
+<p>With any solution there are always a few drawbacks.  The first one we think of is the fact that each time we reach out for an AJAX request, we have to use the template parser class, which is somewhat slow.  It could possibly be handled better by just returning the exact data you need and handling the &#8220;templating&#8221; in the javascript.  We&#8217;ve actually used this JSON plugin in the past to accomplish this (however I&#8217;m not 100% sure if it still avoids using the template parser), or you could write some raw SQL queries if you are feeling up to it.</p>
+
+<p>The second drawback would be the duplicate code in the ajax_scroll.html template.  We typically try to keep our code as DRY as possible and having two identical code blocks, which both need to be maintained, is somewhat cumbersome.  You could probably come up with a pretty quick snippet to handle this, but thats something for the developer to decide for themselves.</p>
+
+<p>We hope this tutorial was helpful and shed some light onto a useful EE technique.  You can see the demo <a href="../examples/infinite_scroll.html">here</a>, and full code is available <a href="https://github.com/bryantAXS/Infinite-Scroll-Article-Example">here</a>. Feel free to download and take a look for yourself.</p>
+
+  </div>
+
+  <div class='dotted-line mt30'></div>
+
+  <div id='comments-container'>
+    <span class='comments-container-title'>Comments</span>
+    
+    
+
+    
+
+    <div class="comment-container">
+      <div class="comment-top clearfix">
+        
+                <img src="http://www.gravatar.com/avatar/f5aaa511091d84a34e235ae9caee2259" class='avatar' alt="John Briggs's gravatar" />
+                
+        <div>
+                      <a class='name' href='http://rizencreative.com'>John Briggs</a>
+                      <span class='date'>5.7.12</span>
+        </div>
+      </div>
+      <div class="comment-body">
+        <p>Awesome plugin, but the demo isn&#8217;t working in IE8&#8230; kind of a bummer since I&#8217;m not a js wizard yet. Thank you once again, Explorer.</p>
+      </div>
+    </div><!-- .comment-container -->
+
+    
+
+    
+
+    <div class="comment-container">
+      <div class="comment-top clearfix">
+        
+                <img src="http://www.gravatar.com/avatar/de0d375c0c8d7367e7105c2eeb0e9f8c" class='avatar' alt="Philip's gravatar" />
+                
+        <div>
+                      <span class='name'>Philip</span>  
+                    <span class='date'>3.26.12</span>
+        </div>
+      </div>
+      <div class="comment-body">
+        <p>Hey guys,</p>
+
+<p>I&#8217;ve been trying to use Endless Scroll combined with Masonry, been trying to use your code example above with no luck.</p>
+
+<p>Have you ever used it in combination with masonry?</p>
+
+<p>P</p>
+      </div>
+    </div><!-- .comment-container -->
+
+    
+
+    
+
+    <div class="comment-container">
+      <div class="comment-top clearfix">
+        
+                <img src="http://www.gravatar.com/avatar/7203423c16c6acc0f5308712f4eca7f7" class='avatar' alt="Andy Harris's gravatar" />
+                
+        <div>
+                      <span class='name'>Andy Harris</span>  
+                    <span class='date'>3.20.12</span>
+        </div>
+      </div>
+      <div class="comment-body">
+        <p>Great tutorial, perfect for what I need to do - however, I&#8217;m having the same issue as James. Sometimes it loads duplicate blocks of content. I can&#8217;t see a pattern to it, but it&#8217;s as if it forgets the offset.</p>
+      </div>
+    </div><!-- .comment-container -->
+
+    
+
+    
+
+    <div class="comment-container">
+      <div class="comment-top clearfix">
+        
+                <img src="http://www.gravatar.com/avatar/a74462d4bcdd03c7b911896568f10324" class='avatar' alt="Milan's gravatar" />
+                
+        <div>
+                      <span class='name'>Milan</span>  
+                    <span class='date'>2.29.12</span>
+        </div>
+      </div>
+      <div class="comment-body">
+        <p>Ignore post, I was missing the &#8220;being parsed on input.&#8221; portion. Feel utterly braindead for the one. Fantastic tutorial btw :)</p>
+      </div>
+    </div><!-- .comment-container -->
+
+    
+
+    
+
+    <div class="comment-container">
+      <div class="comment-top clearfix">
+        
+                <img src="http://www.gravatar.com/avatar/a74462d4bcdd03c7b911896568f10324" class='avatar' alt="Milan's gravatar" />
+                
+        <div>
+                      <span class='name'>Milan</span>  
+                    <span class='date'>2.28.12</span>
+        </div>
+      </div>
+      <div class="comment-body">
+        <p>Hello, I seem to keep getting an endless loop, it wont catch the end of the entries at all, any ideas how to get around that?</p>
+      </div>
+    </div><!-- .comment-container -->
+
+    
+
+    
+
+    <div class="comment-container">
+      <div class="comment-top clearfix">
+        
+                <img src="http://www.gravatar.com/avatar/759ba92edda3c8398e37627dc57d6072" class='avatar' alt="James's gravatar" />
+                
+        <div>
+                      <a class='name' href='http://www.jamesmattison.co.uk'>James</a>
+                      <span class='date'>2.12.12</span>
+        </div>
+      </div>
+      <div class="comment-body">
+        <p>Wonderful tutorial, I&#8217;ve been looking for a way to implement this on my site for over a year and up until now haven&#8217;t been able to find instructions that I had the programming knowledge to follow or understand.</p>
+
+<p>I seem to have got the basic functionality working on my site now, but I randomly get duplicate entries as I scroll down, sometimes whole blocks of two or three entries are duplicated.</p>
+
+<p>The output page is here: <a href="http://www.jamesmattison.co.uk/index.php/blog">http://www.jamesmattison.co.uk/index.php/blog</a></p>
+
+<p>Is there anything you can imagine I&#8217;ve done incorrectly that might be causing this?</p>
+      </div>
+    </div><!-- .comment-container -->
+
+    
+
+    
+
+    <div class="comment-container">
+      <div class="comment-top clearfix">
+        
+                <img src="http://www.gravatar.com/avatar/07b239736d6d42230369c29ee8e64c9a" class='avatar' alt="Bryant's gravatar" />
+                
+        <div>
+                      <span class='name'>Bryant</span>  
+                    <span class='date'>2.9.12</span>
+        </div>
+      </div>
+      <div class="comment-body">
+        <p>Thanks Philip!</p>
+      </div>
+    </div><!-- .comment-container -->
+
+    
+
+    
+
+    <div class="comment-container">
+      <div class="comment-top clearfix">
+        
+                <img src="http://www.gravatar.com/avatar/fa0200eb0f17171a06c595d01238a205" class='avatar' alt="Philip Benton's gravatar" />
+                
+        <div>
+                      <a class='name' href='http://doctypehtml.co.uk'>Philip Benton</a>
+                      <span class='date'>1.21.12</span>
+        </div>
+      </div>
+      <div class="comment-body">
+        <p>Excellent tutorial guys. I&#8217;ve been looking for a good EE infinite scroll  example for a while.</p>
+      </div>
+    </div><!-- .comment-container -->
+
+    
+
+    
+
+    <div class="comment-container">
+      <div class="comment-top clearfix">
+        
+                <img src="http://www.gravatar.com/avatar/60bd932f4071e624f8a4f1b45a32219b" class='avatar' alt="Anthony Collini's gravatar" />
+                
+        <div>
+                      <span class='name'>Anthony Collini</span>  
+                    <span class='date'>1.8.12</span>
+        </div>
+      </div>
+      <div class="comment-body">
+        <p>This is definitely needed for EE and there are no tutorials out there like this. Thanks for taking the time to write this. </p>
+
+<p>It works no problem with basic EE search, but I&#8217;ve been having issues with implementing it with Solspace Super Search instead of using the channel entries tag because of its dynamic nature and reading from uris. If I figure it out, I&#8217;ll post my solution on how to get it working.</p>
+
+<p>Thanks again.</p>
+      </div>
+    </div><!-- .comment-container -->
+
+    
+
+  </div><!-- comments-container -->
+
+  <div class='dotted-line mt30'></div>
+
+  Commenting is not available in this channel entry.
+
+</div>
+
+
+  </section><!-- blog-listing-content-left -->
+  <section id='blog-listing-content-right' class='col-3 left'>
+    
+    <h2>Article Categories</h2>
+    <ul id='topic-list'>
+      <ul>
+<li>
+      <li><a href="category/development/index.html" title="development">Development</a></li>   
+      </li>
+</ul>
+
+    </ul>
+
+    <h2>Article Tags</h2>
+    <ul id='topic-list'>
+       
+      <li><a href="tag/expression+engine/index.html" title="expression engine">expression engine</a></li>   
+       
+      <li><a href="tag/tutorial/index.html" title="tutorial">tutorial</a></li>   
+      
+    </ul>
+    
+    <h2>Share</h2>
+    <div id='share-container'>
+      <div>
+        <a href="http://twitter.com/share?url=&amp;via=The%20Good%20Lab" class="twitter-share-button">Tweet</a>
+      </div>
+     
+      <div>
+        <fb:like href="" layout="button_count" show_faces="false" width="70" font=""></fb:like>
+      </div>  
+    </div>
+    
+  </section>
+
+    
+
+      
+    
+  </section><!-- blog-listing-content-container -->
+
+		<footer class='clear has-layout'>
+		  <div class='dotted-line'></div>
+		  <div id='footer-left'>
+		    <img src='../assets/images/illinois.png' alt='illinois'>
+		    Wicker Park - Chicago
+		  </div>
+		  <a href='mailto:hello@thegoodlab.com'>hello@thegoodlab.com</a>
+		</footer>
+
+	</section><!-- #main-container -->
+
+</div><!-- #content-container -->
+
+</body>
+
+
+<!-- get clicky -->
+<script type="text/javascript">
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(66504950);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+
+
+<script type="text/javascript" src="../assets/js/syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="../assets/js/syntaxhighlighter/scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../assets/js/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../assets/js/syntaxhighlighter/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="../assets/js/syntaxhighlighter/scripts/shBrushEE.js"></script>
+<script type="text/javascript" src="../assets/js/syntaxhighlighter/scripts/shBrushYaml.js"></script>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>/*<![CDATA[*/!window.jQuery && document.write('<script src="assets/js/jquery-1.4.4.min.js"><\/script>')/*]]>*/</script>
+
+
+<script type="text/javascript" src="../assets/js/jquery.cycle.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="../assets/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+
+<script src="../assets/js/plugins-v=1.js"></script>
+<script src="../assets/js/main-v=1.js"></script>
+
+
+<!--[if lt IE 7 ]>
+	<script type="text/javascript" src="assets/js/iepngfix_tilebg.js"></script>
+	<style>
+		/* Add comma-separated CSS selectors */
+	 	img, div { behavior: url("assets/iepngfix.htc") }
+	</style>
+<![endif]-->
+
+</body>
+</html>
